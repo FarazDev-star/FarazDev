@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- === META === -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Muhammad Faraz — Portfolio</title>
+  <meta name="description" content="Web Developer • Graphic Designer • SEO • Video Editor in Lahore, Pakistan." />
+  <meta name="theme-color" content="#06b6d4" />
+  <meta property="og:title" content="Muhammad Faraz — Portfolio" />
+  <meta property="og:description" content="Web Developer • Graphic Designer • SEO • Video Editor" />
+  <meta property="og:type" content="website" />
+
+  <!-- Hints for faster 3rd-party fetches -->
+  <link rel="preconnect" href="https://www.google.com" crossorigin>
+  <link rel="dns-prefetch" href="//www.google.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- EmailJS (CDN) -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Muhammad Faraz",
+    "jobTitle":"Web Developer",
+    "email":"mailto:faggaf786678@gmail.com",
+    "url":"https://muhammadfaraz.com",
+    "sameAs":["https://github.com/","https://www.linkedin.com/"]
+  }
+  </script>
+</head>
+<body class="selection:bg-cyan-600/30">
+
+  <!-- background orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- === NAV === -->
+  <header class="sticky top-0 z-50 backdrop-blur-lg supports-[backdrop-filter]:bg-black/30 border-b border-white/10">
+    <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-2">
+        <span class="inline-flex h-8 w-8 rounded-full bg-gradient-to-br from-cyan-400 to-fuchsia-400"></span>
+        <span class="font-bold tracking-wide text-lg">Muhammad Faraz</span>
+      </a>
+      <button id="navToggle" class="md:hidden p-2 rounded-lg hover:bg-white/10" aria-label="Toggle menu">
+        <svg width="24" height="24" fill="none" stroke="currentColor"><path stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <ul id="nav" class="hidden md:flex items-center gap-8 text-sm">
+        <li><a class="nav-link hover:text-cyan-300" href="#about">About</a></li>
+        <li><a class="nav-link hover:text-cyan-300" href="#projects">Projects</a></li>
+        <li><a class="nav-link hover:text-cyan-300" href="#services">Services</a></li>
+        <li><a class="nav-link hover:text-cyan-300" href="#skills">Skills</a></li>
+        <li><a class="nav-link hover:text-cyan-300" href="#experience">Experience</a></li>
+        <li><a class="nav-link hover:text-cyan-300" href="#contact">Contact</a></li>
+        <li>
+          <a id="cvBtn" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 text-sm px-4 py-2 btn-glow"
+             href="gr%20cv.pdf" target="_blank" rel="noopener" title="Download CV">
+             Download CV
+             <svg width="18" height="18" fill="none" stroke="currentColor">
+               <path stroke-width="2" d="M12 5v6m0 0l3-3m-3 3L9 8M3 13v3h12v-3"/>
+             </svg>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="mobile" class="md:hidden hidden px-4 pb-3 bg-black/30 backdrop-blur-lg">
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#about">About</a>
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#projects">Projects</a>
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#services">Services</a>
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#skills">Skills</a>
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#experience">Experience</a>
+      <a class="block py-3 hover:text-cyan-300 nav-link" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <!-- === HERO === -->
+  <section class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+    <div class="grid md:grid-cols-[340px,1fr] gap-12 items-center">
+      <div class="relative w-[220px] h-[220px] md:w-[300px] md:h-[300px] rounded-full mx-auto ring-gradient">
+        <div class="avatar absolute inset-0 m-auto w-[200px] h-[200px] md:w-[260px] md:h-[260px] rounded-full border-2 border-white/20 glass text-6xl font-bold">
+          MF
+        </div>
+      </div>
+      <div>
+        <span class="inline-flex items-center gap-2 rounded-full border border-white/20 bg-white/10 px-4 py-2 text-xs tracking-wide backdrop-blur-sm">
+          <span class="h-3 w-3 rounded-full bg-emerald-400 animate-pulse"></span> Available for work
+        </span>
+        <h1 class="mt-6 text-5xl sm:text-6xl md:text-7xl font-bold leading-tight">
+          I create <span class="gtitle">stunning digital</span> experiences.
+        </h1>
+        <p class="mt-6 text-slate-300/90 max-w-2xl text-lg">
+          Web Developer • Graphic Designer • SEO Specialist • Video Editor. I craft responsive, SEO-optimized websites and compelling video content that drives results.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">HTML</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">CSS</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">JavaScript</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">Video Editing</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">SEO</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">Python</span>
+          <span class="px-4 py-2 text-sm rounded-full border border-white/20 bg-white/10 backdrop-blur-sm">GA • GTM</span>
+        </div>
+        <div class="mt-10 flex flex-wrap gap-4">
+          <a href="#projects" class="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 px-6 py-3 btn-primary text-white font-medium">
+            See Projects
+            <svg width="18" height="18" fill="none" stroke="currentColor"><path stroke-width="2" d="M5 12l4-4 4 4"/></svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center gap-2 rounded-full border-2 border-white/20 bg-transparent hover:bg-white/10 px-6 py-3 text-white font-medium">
+            Hire Me
+          </a>
+        </div>
+      </div>
+    </div>
+    <span class="u-shimmer mt-12"></span>
+  </section>
+
+  <!-- === ABOUT === -->
+  <section id="about" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <h2 class="text-4xl font-bold mb-4 section-heading">About Me</h2>
+    <div class="grid lg:grid-cols-2 gap-10 reveal">
+      <div class="glass rounded-2xl p-8 border border-white/10">
+        <h3 class="text-2xl font-semibold mb-4">My Journey</h3>
+        <p class="mt-4 text-slate-300/90 text-lg">
+          I'm a Lahore-based creative professional with 2+ years of experience crafting digital experiences for local & international clients.
+          I specialize in creating visually stunning websites that perform exceptionally well and producing engaging video content that captivates audiences.
+        </p>
+        <ul class="mt-8 grid sm:grid-cols-2 gap-4 text-lg">
+          <li class="flex gap-3 items-center"><span class="text-cyan-300 text-xl">▹</span> Web design & development</li>
+          <li class="flex gap-3 items-center"><span class="text-cyan-300 text-xl">▹</span> Technical SEO & analytics</li>
+          <li class="flex gap-3 items-center"><span class="text-cyan-300 text-xl">▹</span> Video content creation</li>
+          <li class="flex gap-3 items-center"><span class="text-cyan-300 text-xl">▹</span> Performance optimization</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-white/10">
+        <h3 class="text-2xl font-semibold mb-6">Quick Stats</h3>
+        <div class="mt-6 grid grid-cols-3 gap-6 text-center">
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-4xl font-bold gtitle" data-counter="4">0</div>
+            <p class="text-sm text-slate-400 mt-2">Sites Launched</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-4xl font-bold gtitle" data-counter="2">0</div>
+            <p class="text-sm text-slate-400 mt-2">Years</p>
+          </div>
+          <div class="p-4 rounded-xl bg-white/5 border border-white/10">
+            <div class="text-4xl font-bold gtitle" data-counter="40">0</div>
+            <p class="text-sm text-slate-400 mt-2">Client NPS</p>
+          </div>
+        </div>
+        <a class="mt-8 inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 text-lg font-medium" href="mailto:faggaf786678@gmail.com">
+          Let's talk
+          <svg width="20" height="20" fill="none" stroke="currentColor"><path stroke-width="2" d="M5 12l4-4 4 4"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- === SERVICES === -->
+  <section id="services" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-black/20">
+    <h2 class="text-4xl font-bold text-center mb-4 section-heading">Services</h2>
+    <p class="mt-2 text-center text-slate-400 text-lg max-w-2xl mx-auto">Specialized services to elevate your digital presence</p>
+    <div class="mt-16 grid md:grid-cols-3 gap-8">
+      <div class="glass rounded-2xl p-8 border border-white/10 neon-hover skill-card">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center mb-6">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Website Development</h3>
+        <p class="mt-3 text-slate-400">Modern, responsive sites with SEO & analytics integration.</p>
+        <ul class="mt-6 space-y-3 text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Custom Design & Development</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Performance Optimization</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Launch & Support</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-cyan-400/30 neon-hover skill-card">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center mb-6">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">Video Production</h3>
+        <p class="mt-3 text-slate-400">Professional video editing and content creation.</p>
+        <ul class="mt-6 space-y-3 text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Promotional Videos</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Social Media Content</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Post-production</li>
+        </ul>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-white/10 neon-hover skill-card">
+        <div class="w-14 h-14 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center mb-6">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3">SEO Optimization</h3>
+        <p class="mt-3 text-slate-400">Technical fixes + content strategy for rankings.</p>
+        <ul class="mt-6 space-y-3 text-slate-300">
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Comprehensive Site Audit</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Schema & Sitemaps</li>
+          <li class="flex items-start gap-2"><span class="text-cyan-300 mt-1">•</span> Performance Reporting</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- === PROJECTS === -->
+  <section id="projects" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <h2 class="text-4xl font-bold text-center mb-4 section-heading">Projects</h2>
+    <p class="mt-2 text-center text-slate-400 text-lg max-w-2xl mx-auto">Selected client work & creative projects</p>
+    <div id="projectsGrid" class="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+    <div class="text-center mt-12">
+      <a href="projects/" class="inline-flex items-center gap-2 text-cyan-300 hover:text-cyan-200 text-lg font-medium">
+        View detailed case studies
+        <svg width="20" height="20" fill="none" stroke="currentColor"><path stroke-width="2" d="M5 12l4-4 4 4"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- === TESTIMONIALS === -->
+  <section id="testimonials" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-black/20">
+    <h2 class="text-4xl font-bold text-center mb-4 section-heading">Client Testimonials</h2>
+    <div class="mt-16 grid md:grid-cols-3 gap-8">
+      <blockquote class="glass rounded-2xl p-8 border border-white/10 neon-hover">
+        <p class="text-slate-200 text-lg">"Muhammad delivered a stunning website that not only looks amazing but performs exceptionally well. Our traffic increased by 40% in just two months!"</p>
+        <footer class="mt-6 text-slate-400">— E-commerce Store Owner</footer>
+      </blockquote>
+      <blockquote class="glass rounded-2xl p-8 border border-white/10 neon-hover">
+        <p class="text-slate-200 text-lg">"The video content created for our social media campaigns was exactly what we needed. Engagement has never been higher!"</p>
+        <footer class="mt-6 text-slate-400">— Marketing Director</footer>
+      </blockquote>
+      <blockquote class="glass rounded-2xl p-8 border border-white/10 neon-hover">
+        <p class="text-slate-200 text-lg">"Professional, efficient, and creative. Muhammad understood our vision perfectly and brought it to life beyond our expectations."</p>
+        <footer class="mt-6 text-slate-400">— Startup Founder</footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- === SKILLS === -->
+  <section id="skills" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <div class="glass rounded-2xl p-10 border border-white/10 reveal">
+      <h2 class="text-3xl font-bold mb-2 section-heading">Technical Skills</h2>
+      <div class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10 neon-hover skill-card">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center mb-4">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Frontend</h3>
+          <p class="text-slate-400">HTML, CSS, JavaScript, React, Tailwind</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10 neon-hover skill-card">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center mb-4">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Backend</h3>
+          <p class="text-slate-400">PHP, Python, Node.js, MySQL</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10 neon-hover skill-card">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-pink-400 to-rose-500 flex items-center justify-center mb-4">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/><line x1="2" y1="7" x2="7" y2="7"/><line x1="2" y1="17" x2="7" y2="17"/><line x1="17" y1="17" x2="22" y2="17"/><line x1="17" y1="7" x2="22" y2="7"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">Video Editing</h3>
+          <p class="text-slate-400">Adobe Premiere, After Effects, Filmora, CapCut</p>
+        </div>
+        <div class="p-6 rounded-xl bg-white/5 border border-white/10 neon-hover skill-card">
+          <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center mb-4">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+          <h3 class="font-bold text-lg mb-2">SEO & Analytics</h3>
+          <p class="text-slate-400">Technical SEO, Google Analytics, GTM, Search Console</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- === EXPERIENCE === -->
+  <section id="experience" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20 bg-black/20">
+    <h2 class="text-4xl font-bold mb-4 section-heading">Experience</h2>
+    <div class="mt-12 grid lg:grid-cols-2 gap-8">
+      <div class="glass rounded-2xl p-8 border border-white/10 reveal neon-hover">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-cyan-300 font-medium">2022 — Present</p>
+            <h3 class="text-2xl font-bold mt-2">Freelance Web Developer</h3>
+            <p class="text-slate-400 mt-1">Website Development & Video Editing</p>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z"/></svg>
+          </div>
+        </div>
+        <p class="mt-6 text-slate-300">Providing web development and video editing services to clients worldwide, specializing in creating modern, responsive websites and engaging video content.</p>
+      </div>
+      <div class="glass rounded-2xl p-8 border border-white/10 reveal neon-hover">
+        <div class="flex justify-between items-start">
+          <div>
+            <p class="text-cyan-300 font-medium">2021 — Present</p>
+            <h3 class="text-2xl font-bold mt-2">ILM School</h3>
+            <p class="text-slate-400 mt-1">Computer Teacher & Tech Expert</p>
+          </div>
+          <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </div>
+        </div>
+        <p class="mt-6 text-slate-300">Teaching computer science and technology courses while managing the school's digital infrastructure and providing technical support.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- === CONTACT === -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+    <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+      <div class="glass rounded-2xl p-10 border border-white/10 reveal">
+        <h2 class="text-3xl font-bold mb-4 section-heading">Let's Create Together</h2>
+        <p class="mt-4 text-slate-300/90 text-lg">Have a project in mind? I'd love to hear about it. Fill out the form and I'll get back to you within 24 hours.</p>
+        <div class="mt-10 space-y-6">
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">Location</h3>
+              <p class="text-slate-400">Lahore, Pakistan</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">Email</h3>
+              <a class="text-cyan-300 hover:text-cyan-200" href="mailto:faggaf786678@gmail.com">faggaf786678@gmail.com</a>
+            </div>
+          </div>
+          <div class="flex items-start gap-4">
+            <div class="w-12 h-12 rounded-full bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center flex-shrink-0">
+              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-bold text-lg">Website</h3>
+              <a class="text-cyan-300 hover:text-cyan-200" href="https://muhammadfaraz.com" target="_blank" rel="noopener">muhammadfaraz.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form (EmailJS) -->
+      <form id="contactForm" class="glass rounded-2xl p-10 border border-white/10 reveal">
+        <h3 class="text-2xl font-bold mb-6">Send a Message</h3>
+        <!-- honeypot (hidden) -->
+        <input type="text" name="_hp" class="hidden" tabindex="-1" autocomplete="off" />
+        <div class="space-y-6">
+          <div class="grid sm:grid-cols-2 gap-6">
+            <div>
+              <label class="block text-slate-300 mb-2" for="name">Name</label>
+              <input required id="name" name="name" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-cyan-400 form-input" />
+            </div>
+            <div>
+              <label class="block text-slate-300 mb-2" for="email">Email</label>
+              <input required id="email" type="email" name="email" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-cyan-400 form-input" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-slate-300 mb-2" for="message">Message</label>
+            <textarea required id="message" name="message" rows="5" class="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 outline-none focus:border-cyan-400 form-input"></textarea>
+          </div>
+          <button id="sendBtn" class="w-full flex items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 px-6 py-4 btn-primary text-white font-medium">
+            <svg id="spinner" class="hidden animate-spin" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-opacity=".25" stroke-width="4" fill="none"/>
+              <path d="M4 12a8 8 0 0 1 8-8" stroke="currentColor" stroke-width="4" fill="none"/>
+            </svg>
+            <span>Send Message</span>
+          </button>
+          <p class="text-center text-slate-400 text-sm">Powered by EmailJS</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- === FOOTER === -->
+  <footer class="border-t border-white/10 bg-black/30">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10 flex flex-col sm:flex-row gap-6 items-center justify-between">
+      <p class="text-slate-400">© <span id="year"></span> Muhammad Faraz. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a class="text-slate-400 hover:text-cyan-300 transition-colors" href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        <a class="text-slate-400 hover:text-cyan-300 transition-colors" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="text-slate-400 hover:text-cyan-300 transition-colors" href="mailto:faggaf786678@gmail.com">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="totop" class="rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-400 hover:to-blue-400 p-4 shadow-lg" title="Back to top" aria-label="Back to top">
+    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+  </button>
+
+  <!-- Toast -->
+  <div id="toast" class="glass rounded-lg px-6 py-4 text-lg"></div>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
