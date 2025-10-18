@@ -1,10 +1,37 @@
 /* ========= CONFIG ========= */
 // Your projects — no images needed (logos auto-fetch from site favicons).
+/* ========= CONFIG ========= */
+// Your projects — no images needed (logos auto-fetch from site favicons).
 const PROJECTS = [
-  { name:"Nazneen Akbari", url:"https://nazneenakbari.com", desc:"E-commerce fashion site — full design, development, and management.", tags:["Shopify","SEO","Speed"], badge:"Fashion" },
-  { name:"Malik Heating & Cooling", url:"https://malikheatingcooling.com", desc:"Technical fixes & performance tuning.", tags:["Fixes","Speed"] },
-  { name:"Daraz Store", url:"https://www.daraz.pk/shop/pzg6b52d", desc:"E-commerce operations & optimization on Daraz.", tags:["E-commerce","Ops"], badge:"Marketplace" }
+  { 
+    name: "Nazneen Akbari", 
+    url: "https://nazneenakbari.com", 
+    desc: "E-commerce fashion site — full design, development, and management.", 
+    tags: ["Shopify","SEO","Speed"], 
+    badge: "Fashion" 
+  },
+  { 
+    name: "Malik Heating & Cooling", 
+    url: "https://malikheatingcooling.com", 
+    desc: "Technical fixes & performance tuning.", 
+    tags: ["Fixes","Speed"] 
+  },
+  { 
+    name: "Daraz Store", 
+    url: "https://www.daraz.pk/shop/pzg6b52d", 
+    desc: "E-commerce operations & optimization on Daraz.", 
+    tags: ["E-commerce","Ops"], 
+    badge: "Marketplace" 
+  },
+  { 
+    name: "Video Editing", 
+    url: "https://www.youtube.com/shorts/cr0SNEhqN1M", 
+    desc: "Movie clip edit as a short for YouTube.", 
+    tags: ["Video Editing","Filmora"], 
+    badge: "Video" 
+  }
 ];
+
 
 // EmailJS keys — PUBLIC ONLY. Do NOT expose private key on the web.
 const EMAILJS_PUBLIC_KEY  = "uyOn7ZH2LPUeSQkJw";
@@ -148,3 +175,4 @@ try{
     btn.removeAttribute("disabled"); spin.classList.add("hidden");
   }
 });
+
