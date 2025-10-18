@@ -16,7 +16,14 @@ const PROJECTS = [
     desc: "Movie clip edit as a short for YouTube.", 
     tags: ["Video Editing","Filmora"], 
     badge: "Video" 
-  }
+  },
+  {
+  name: "Youtube Channel",
+    url: "https://www.youtube.com/@ikstudio_123",
+  desc: "Youtube channel for Drama & Movies edit clips ",
+    tags: ["Youtube Channel" , " Youtube Shorts"],
+  badge: "Youtube Channel"
+}
 ];
 
 
@@ -162,5 +169,6 @@ try{
     btn.removeAttribute("disabled"); spin.classList.add("hidden");
   }
 });
+
 
 
