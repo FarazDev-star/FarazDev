@@ -4,19 +4,6 @@
 // Your projects — no images needed (logos auto-fetch from site favicons).
 const PROJECTS = [
   { 
-    name: "Nazneen Akbari", 
-    url: "https://nazneenakbari.com", 
-    desc: "E-commerce fashion site — full design, development, and management.", 
-    tags: ["Shopify","SEO","Speed"], 
-    badge: "Fashion" 
-  },
-  { 
-    name: "Malik Heating & Cooling", 
-    url: "https://malikheatingcooling.com", 
-    desc: "Technical fixes & performance tuning.", 
-    tags: ["Fixes","Speed"] 
-  },
-  { 
     name: "Daraz Store", 
     url: "https://www.daraz.pk/shop/pzg6b52d", 
     desc: "E-commerce operations & optimization on Daraz.", 
@@ -175,4 +162,5 @@ try{
     btn.removeAttribute("disabled"); spin.classList.add("hidden");
   }
 });
+
 
